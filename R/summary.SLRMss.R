@@ -1,0 +1,16 @@
+summary.SLRMss<-
+  function(fit){
+    out=NULL
+    out$call=match.call()
+    out$beta=fit$beta.coefficients
+    out$phi=fit$phi
+    out$betah0=fit$beta.coefficients.h0
+    out$phih0=fit$phi.h0
+    out$null.hypotesis=fit$nul 
+    out$statistics=fit$statistics
+    out$statistic.distribution=fit$statistic.distribution
+    out$df=fit$df
+    out$AICc=fit$AIC
+    out$BIC=fit$BIC
+    out
+  }
