@@ -1,0 +1,170 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title>R: Symmetric Linear Regression Models for Small Samples</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" type="text/css" href="R.css" />
+</head><body>
+
+<table width="100%" summary="page for slrmss {SLRMss}"><tr><td>slrmss {SLRMss}</td><td style="text-align: right;">R Documentation</td></tr></table>
+
+<h2>Symmetric Linear Regression Models for Small Samples
+
+</h2>
+
+<h3>Description</h3>
+
+<p>Computes Wald, Likelihood-ratio, Score or Gradient of symmetrical linear regression models. Also computes modified Likelihood-ratio, Score and Gradient for small samples.
+
+</p>
+
+
+<h3>Usage</h3>
+
+<pre>
+slrmss(formula, family, xi, statistic, testingbeta, data=NULL)
+</pre>
+
+
+<h3>Arguments</h3>
+
+<table summary="R argblock">
+<tr valign="top"><td><code>formula</code></td>
+<td>
+<p>an object of class &quot;formula&quot; (or one that can be coerced to that class): a symbolic description of the model to be fitted.
+</p>
+</td></tr>
+<tr valign="top"><td><code>family</code></td>
+<td>
+<p>a description of the error distribution to be used in the model. There are four supported families, Normal, t-Student, Power Exponential and Logistic (&quot;Normal&quot;, &quot;Student&quot;, &quot;Powerexp&quot; and &quot;Logistic&quot;, 
+respectively)
+
+</p>
+</td></tr>
+<tr valign="top"><td><code>xi</code></td>
+<td>
+<p>an extra parameter of some specified error distribution. For t-Student is a positive value and for Power Exponential is a real number between -1 and 1/3.
+
+</p>
+</td></tr>
+<tr valign="top"><td><code>statistic</code></td>
+<td>
+<p>the statistic which will be used. It includes &quot;Wald&quot;, &quot;LR&quot;, &quot;Score&quot; or &quot;Gradient&quot;.
+
+</p>
+</td></tr>
+<tr valign="top"><td><code>testingbeta</code></td>
+<td>
+<p>an vector containing the names of the variables to be testing.
+
+</p>
+</td></tr>
+<tr valign="top"><td><code>data</code></td>
+<td>
+<p>an optional data frame containing the variables in the model.
+
+</p>
+</td></tr>
+</table>
+
+
+<h3>Value</h3>
+
+<table summary="R valueblock">
+<tr valign="top"><td><code>beta.coefficients</code></td>
+<td>
+<p>a matrix with the estimated position parameters under alternative hypothesis.</p>
+</td></tr>
+<tr valign="top"><td><code>phi</code></td>
+<td>
+<p>a numeric value with the estimated precision paramater under alternative hypothesis.</p>
+</td></tr>
+<tr valign="top"><td><code>beta.coefficients.h0</code></td>
+<td>
+<p>a matrix with the estimated position parameters under null hypothesis.</p>
+</td></tr>
+<tr valign="top"><td><code>phi.h0</code></td>
+<td>
+<p>a numeric value with the estimated precision paramater under null hypothesis.</p>
+</td></tr>
+<tr valign="top"><td><code>beta.fitted</code></td>
+<td>
+<p>a vector with the fitted values of the model.</p>
+</td></tr>
+<tr valign="top"><td><code>null.hypothesis</code></td>
+<td>
+<p>the description of the null hypothesis.</p>
+</td></tr>
+<tr valign="top"><td><code>statistics</code></td>
+<td>
+<p>a matrix with the selected statistics and theirs p-values.</p>
+</td></tr>
+<tr valign="top"><td><code>statistic.distribution</code></td>
+<td>
+<p>the name of the statistics' distribution used to test null hypothesis. It always return &quot;Chi-Squared&quot;.</p>
+</td></tr>
+<tr valign="top"><td><code>df</code></td>
+<td>
+<p>the degrees of freedom of the statistics' distribution. It's the length of the testingbeta vector.</p>
+</td></tr>
+<tr valign="top"><td><code>std.residuals</code></td>
+<td>
+<p>the standardized residuals.</p>
+</td></tr>
+<tr valign="top"><td><code>AICc</code></td>
+<td>
+<p>the corrected Akaike Information Criterion for small samples.</p>
+</td></tr>
+<tr valign="top"><td><code>BIC</code></td>
+<td>
+<p>the Bayesian Information Criterion.</p>
+</td></tr>
+</table>
+
+
+
+
+
+
+
+<h3>Author(s)</h3>
+
+<p>Ivonaldo Silvestre da Silva-Junior &lt;ivonaldojunior@hotmail.com.br&gt; and Francisco Moises C. de Medeiros
+
+</p>
+
+
+<h3>References</h3>
+
+<p>Medeiros, F. M. C and Ferrari, S. L. P. (2017 Small-sample testing inference in symmetric and log-symmetric linear regression models,
+Statistica Neerlandica 2017.
+
+</p>
+
+
+<h3>Examples</h3>
+
+<pre>
+#Using the orange data frame to fit the emulsion density and testing the xanthan gum quantity.
+#
+#data(orange)
+#
+#slrmss(emulsion~arabicgum+xanthangum,family="Normal",testingbeta="xanthangum",data=orange)
+#
+#slrmss(emulsion~arabicgum+xanthangum+orangeoil,family="Normal",testingbeta="xanthangum",data=orange)
+#
+#fit&lt;-slrmss(emulsion~arabicgum+xanthangum+orangeoil,family="Student",xi=3,testingbeta="xanthangum",data=orange)
+#summary(fit)
+#plot(fit)
+###############################################################
+###############################################################
+#Using the cheese data frame to fit the cohesiveness and test xanthan gum percentage and sodium caseinate percentage.
+#
+#data(cheese)
+#
+#fit&lt;-slrmss(exp(cohe)~fat+xangum+sodcase,family="Normal",testingbeta=c("xangum","sodcase"),statistic="Gradient",data=cheese)
+#summary(fit)
+#plot(fit)
+
+
+</pre>
+
+<hr /><div style="text-align: center;">[Package <em>SLRMss</em> version 1.0 <a href="00Index.html">Index</a>]</div>
+</body></html>
