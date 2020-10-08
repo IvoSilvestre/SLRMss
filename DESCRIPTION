@@ -6,7 +6,7 @@ Date: 2020-01-25
 Author: Ivonaldo Silvestre da Silva-Junior [aut,cre], Francisco Moises C. de Medeiros [aut]
 Maintainer: Ivonaldo Silvestre da Silva-Junior <ivosilvestresjr@gmail.com>
 Description: A function to obtain ordinary and modified statistics for symmetrical linear regression models with small samples. The supported ordinary statistics include Wald,score, likelihood ratio and gradient and the modified statistics include score, likelihood ratio and gradient. 
-License: What license is it under?
+License: GLP-3
 NeedsCompilation: no
 Packaged: 2020-05-08 18:23:38 UTC; ivosi
 Depends: R (>= 3.5.0), ssym, nleqslv
