@@ -1,6 +1,5 @@
 \name{SLRMss-package}
 \alias{SLRMss-package}
-\alias{SLRMss}
 \docType{package}
 \title{ 
 \packageTitle{SLRMss}
