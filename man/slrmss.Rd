@@ -93,5 +93,3 @@ Ivonaldo Silvestre da Silva-Junior <ivonaldojunior@hotmail.com.br> and Francisco
 #summary(fit)
 #plot(fit)
 }
-% Add one or more standard keywords, see file 'KEYWORDS' in the
-% R documentation directory.
