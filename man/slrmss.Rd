@@ -76,11 +76,11 @@ Ivonaldo Silvestre da Silva-Junior <ivonaldojunior@hotmail.com.br> and Francisco
 #
 #data(orange)
 #
-#slrmss(emulsion~arabicgum+xanthangum,family="Normal",testingbeta="xanthangum",data=orange)
+#slrmss(emulsion~arabicgum+xanthangum,family="Normal",testingbeta="xanthangum",statistic="LR",data=orange)
 #
-#slrmss(emulsion~arabicgum+xanthangum+orangeoil,family="Normal",testingbeta="xanthangum",data=orange)
+#slrmss(emulsion~arabicgum+xanthangum+orangeoil,family="Normal",testingbeta="xanthangum",statistic="Score",data=orange)
 #
-#fit<-slrmss(emulsion~arabicgum+xanthangum+orangeoil,family="Student",xi=3,testingbeta="xanthangum",data=orange)
+#fit<-slrmss(emulsion~arabicgum+xanthangum+orangeoil,family="Student",xi=3,testingbeta="xanthangum",,statistic="LR",data=orange)
 #summary(fit)
 #plot(fit)
 ###############################################################
@@ -94,4 +94,3 @@ Ivonaldo Silvestre da Silva-Junior <ivonaldojunior@hotmail.com.br> and Francisco
 #plot(fit)
 % Add one or more standard keywords, see file 'KEYWORDS' in the
 % R documentation directory.
-}
