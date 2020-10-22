@@ -77,11 +77,14 @@ Ivonaldo Silvestre da Silva-Junior <ivonaldojunior@hotmail.com.br> and Francisco
 
 data(orange)
 
-slrmss(emulsion~arabicgum+xanthangum,family="Normal",testingbeta="xanthangum",statistic="LR",data=orange)
+slrmss(emulsion~arabicgum+xanthangum,family="Normal",
+testingbeta="xanthangum",statistic="LR",data=orange)
 
-slrmss(emulsion~arabicgum+xanthangum+orangeoil,family="Normal",testingbeta="xanthangum",statistic="Score",data=orange)
+slrmss(emulsion~arabicgum+xanthangum+orangeoil,family="Normal",
+testingbeta="xanthangum",statistic="Score",data=orange)
 
-fit<-slrmss(emulsion~arabicgum+xanthangum+orangeoil,family="Student",xi=3,testingbeta="xanthangum",statistic="LR",data=orange)
+fit<-slrmss(emulsion~arabicgum+xanthangum+orangeoil,family="Student",xi=3,
+testingbeta="xanthangum",statistic="LR",data=orange)
 summary(fit)
 plot(fit)
 ###############################################################
@@ -90,7 +93,8 @@ plot(fit)
 
 data(cheese)
 
-fit<-slrmss(exp(cohe)~fat+xangum+sodcase,family="Normal",testingbeta=c("xangum","sodcase"),statistic="Gradient",data=cheese)
+fit<-slrmss(exp(cohe)~fat+xangum+sodcase,family="Normal",
+testingbeta=c("xangum","sodcase"),statistic="Gradient",data=cheese)
 summary(fit)
 plot(fit)
 }
