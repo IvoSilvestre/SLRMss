@@ -10,4 +10,5 @@ print.SLRMss<-
   print(fit$AIC)
   cat("\nBIC:\n")
   print(fit$BIC)
+  invisible(fit)
 }
