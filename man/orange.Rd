@@ -31,7 +31,8 @@ using multivariate analysis. Journal of the Science of Food and Agriculture.
 \examples{
 data(orange)
 plot(orange)
-fit=slrmss(emulsion~arabicgum+xanthangum+orangeoil,family="Student",xi=3,testingbeta="xanthangum",data=orange)
+fit=SLRMss(emulsion~arabicgum+xanthangum+orangeoil,family="Student",
+xi=3,testingbeta="xanthangum",statistic="LR",data=orange)
 summary(fit)
 plot(fit)
 }

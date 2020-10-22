@@ -31,7 +31,8 @@ Nateghi, L., Roohinejad, S., Totosaus, A., Mirhosseini, H., Shuhaimi, M., Meiman
 data(cheese)
 plot(cheese)
 plot(exp(cheese$cohe),cheese$fat)
-fit=slrmss(exp(cohe)~fat+xangum,family="Normal",testingbeta="xangum",statistic="Gradient",data=cheese)
+fit=SLRMss(exp(cohe)~fat+xangum,family="Normal",testingbeta="xangum",
+statistic="Gradient",data=cheese)
 summary(fit)
 }
 \keyword{datasets}

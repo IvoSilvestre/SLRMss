@@ -28,6 +28,7 @@ Statistica Neerlandica 2017.
 \examples{
 library(SLRMss)
 data(orange)
-fit=slrmss(emulsion~arabicgum+xanthangum+orangeoil, family="Student",xi=3,testingbeta="xanthangum",statistic="Wald",data=orange)
+fit=SLRMss(emulsion~arabicgum+xanthangum+orangeoil, family="Student",
+xi=3,testingbeta="xanthangum",statistic="Wald",data=orange)
 summary(fit)
 }
