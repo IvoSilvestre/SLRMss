@@ -4,6 +4,6 @@ cheese                  Cheese Data set
 orange                  Orange Data Set
 plot.SLRMss             plot.SLRMss
 print.SLRMss            print.SLRMss
-slrmss                  Symmetric Linear Regression Models for Small
+SLRMss                  Symmetric Linear Regression Models for Small
                         Samples
 summary.SLRMss          summary.SLRMss
