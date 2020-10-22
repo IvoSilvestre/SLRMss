@@ -1,7 +1,7 @@
 \name{slrmss}
 \alias{slrmss}
 %- Also NEED an '\alias' for EACH other topic documented here.
-\title{Symmetric Linear Regression Models for Small Samples
+\title{Symmetric Linear Regression Models for small samples
 %%  ~~function to do ... ~~
 }
 \description{Computes Wald, Likelihood-ratio, Score or Gradient of symmetrical linear regression models. Also computes modified Likelihood-ratio, Score and Gradient for small samples.
@@ -72,6 +72,7 @@ Ivonaldo Silvestre da Silva-Junior <ivonaldojunior@hotmail.com.br> and Francisco
 %% ~~objects to See Also as \code{\link{help}}, ~~~
 }
 \examples{
+
 #Using the orange data frame to fit the emulsion density and testing the xanthan gum quantity.
 #
 #data(orange)
@@ -92,4 +93,5 @@ Ivonaldo Silvestre da Silva-Junior <ivonaldojunior@hotmail.com.br> and Francisco
 #fit<-slrmss(exp(cohe)~fat+xangum+sodcase,family="Normal",testingbeta=c("xangum","sodcase"),statistic="Gradient",data=cheese)
 #summary(fit)
 #plot(fit)
+
 }
