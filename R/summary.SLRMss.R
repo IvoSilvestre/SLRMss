@@ -2,12 +2,12 @@ summary.SLRMss<-
   function(fit){
     out=NULL
     out$call=match.call()
-    out$beta=fit$beta.coefficients
-    out$phi=fit$phi
-    out$betah0=fit$beta.coefficients.h0
-    out$phih0=fit$phi.h0
+    out$beta=round(fit$beta.coefficients,4)
+    out$phi=round(fit$phi,4)
+    out$betah0=round(fit$beta.coefficients.h0,4)
+    out$phih0=round(fit$phi.h0,4)
     out$null.hypotesis=fit$nul 
-    out$statistics=fit$statistics
+    out$statistics=round(fit$statistics,4)
     out$statistic.distribution=fit$statistic.distribution
     out$df=fit$df
     out$AICc=fit$AIC
