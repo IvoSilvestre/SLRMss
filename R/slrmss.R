@@ -351,37 +351,36 @@ slrmss <-
     out=NULL
     
     if(statistic!="Wald"){
-      ests = round(c(st,stcor),4)
+      ests = c(st,stcor)
       vs = c(pst,pstcor)
-      vs = round(vs,4)
       estatisticas = matrix(c(ests,vs),ncol=2)
       rownames(estatisticas)=c(statistic,paste(statistic,"*",sep=""))
       colnames(estatisticas)=c("q","Pr(>q)")
       estatisticas = as.table(t(estatisticas))
     }else{
-      estatisticas = matrix(round(c(st,pst),4),ncol=2)
+      estatisticas = matrix(c(st,pst),ncol=2)
       rownames(estatisticas)=statistic
       colnames(estatisticas)=c("q","Pr(>q)")
       estatisticas = as.table(t(estatisticas))
     }
     
     kbinv = sqrt(diag(phichapeu^2 * solve(crossprod(X))/delta20000))
-    mu = round(matrix(c(betachapeu,kbinv),ncol=2),4)
+    mu = matrix(c(betachapeu,kbinv),ncol=2)
     rownames(mu)= colnames(X)
     colnames(mu)=c("estimate","std. error")
     
     kbinv2 = sqrt(diag(phitil^2 * solve(crossprod(X2))/delta20000))
-    mu0 = round(matrix(c(betatil,kbinv2),ncol=2),4)
+    mu0 = matrix(c(betatil,kbinv2),ncol=2)
     rownames(mu0)= colnames(X2)
     colnames(mu0)=c("estimate","std. error")
     
     kbinvp = sqrt(phichapeu^2/(n*(delta20002 - 1)))
-    phi = round(matrix(c(phichapeu,kbinvp),nrow = 1),4)
+    phi = matrix(c(phichapeu,kbinvp),nrow = 1)
     colnames(phi) = c("estimate","std. error")
     rownames(phi) = "phi"
     
     kbinvp2 = sqrt(phitil^2/(n*(delta20002 - 1)))
-    phi0 = round(matrix(c(phitil,kbinvp2),nrow = 1),4)
+    phi0 = matrix(c(phitil,kbinvp2),nrow = 1)
     colnames(phi0) = c("estimate","std. error")
     rownames(phi0) = "phi"
     
