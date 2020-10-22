@@ -92,5 +92,6 @@ Ivonaldo Silvestre da Silva-Junior <ivonaldojunior@hotmail.com.br> and Francisco
 #fit<-slrmss(exp(cohe)~fat+xangum+sodcase,family="Normal",testingbeta=c("xangum","sodcase"),statistic="Gradient",data=cheese)
 #summary(fit)
 #plot(fit)
+}
 % Add one or more standard keywords, see file 'KEYWORDS' in the
 % R documentation directory.
