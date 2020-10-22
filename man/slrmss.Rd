@@ -71,27 +71,3 @@ Ivonaldo Silvestre da Silva-Junior <ivonaldojunior@hotmail.com.br> and Francisco
 \seealso{
 %% ~~objects to See Also as \code{\link{help}}, ~~~
 }
-\examples{
-
-#Using the orange data frame to fit the emulsion density and testing the xanthan gum quantity.
-#
-#data(orange)
-#
-#slrmss(emulsion~arabicgum+xanthangum,family="Normal",testingbeta="xanthangum",statistic="LR",data=orange)
-#
-#slrmss(emulsion~arabicgum+xanthangum+orangeoil,family="Normal",testingbeta="xanthangum",statistic="Score",data=orange)
-#
-#fit<-slrmss(emulsion~arabicgum+xanthangum+orangeoil,family="Student",xi=3,testingbeta="xanthangum",,statistic="LR",data=orange)
-#summary(fit)
-#plot(fit)
-###############################################################
-###############################################################
-#Using the cheese data frame to fit the cohesiveness and test xanthan gum percentage and sodium caseinate percentage.
-#
-#data(cheese)
-#
-#fit<-slrmss(exp(cohe)~fat+xangum+sodcase,family="Normal",testingbeta=c("xangum","sodcase"),statistic="Gradient",data=cheese)
-#summary(fit)
-#plot(fit)
-
-}
