@@ -81,7 +81,7 @@ slrmss(emulsion~arabicgum+xanthangum,family="Normal",testingbeta="xanthangum",st
 
 slrmss(emulsion~arabicgum+xanthangum+orangeoil,family="Normal",testingbeta="xanthangum",statistic="Score",data=orange)
 
-fit<-slrmss(emulsion~arabicgum+xanthangum+orangeoil,family="Student",xi=3,testingbeta="xanthangum",,statistic="LR",data=orange)
+fit<-slrmss(emulsion~arabicgum+xanthangum+orangeoil,family="Student",xi=3,testingbeta="xanthangum",statistic="LR",data=orange)
 summary(fit)
 plot(fit)
 ###############################################################
