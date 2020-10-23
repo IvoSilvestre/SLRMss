@@ -1,6 +1,5 @@
 \name{SLRMss}
 \alias{SLRMss}
-\alias{SLRMss.default}
 %- Also NEED an '\alias' for EACH other topic documented here.
 \title{Symmetric Linear Regression Models for small samples
 %%  ~~function to do ... ~~
