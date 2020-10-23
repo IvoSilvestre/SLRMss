@@ -12,6 +12,5 @@ summary.SLRMss<-
     out$df=fit$df
     out$AICc=fit$AIC
     out$BIC=fit$BIC
-    class(out)<-"summary.SLRMss"
     return(out)
   }
