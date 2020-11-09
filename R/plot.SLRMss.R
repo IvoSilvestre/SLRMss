@@ -50,7 +50,7 @@ plot.SLRMss <-
                     pch = 20,col = "white",ylim = faixay)
       eixox <- sort(qq0$x)
       for(i in 1:length(qq0$x)){
-        if(sort(qq0$y[i])<infsup[1,i] | sort(qq0$y)>infsup[2,i]){
+        if(sort(qq0$y)[i]<infsup[1,i] | sort(qq0$y)[i]>infsup[2,i]){
         points(eixox[i],sort(qq0$y)[i],col="red")
         }else{
         points(eixox[i],sort(qq0$y)[i],col="green")
