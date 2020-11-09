@@ -47,13 +47,13 @@ plot.SLRMss <-
       media <- colMeans(mrq)
       faixay <- range(mrq, rqobs)
       qq0 <- qqnorm(rqobs, main = "Envelope plot",xlab="Quantile N(0,1)",
-                    pch = 20,col = "white",ylim = faixay)
+                    pch = 1,col = "white",ylim = faixay)
       eixox <- sort(qq0$x)
       for(i in 1:length(qq0$x)){
         if(sort(qq0$y)[i]<infsup[1,i] | sort(qq0$y)[i]>infsup[2,i]){
-        points(eixox[i],sort(qq0$y)[i],col="red")
+        points(eixox[i],sort(qq0$y)[i],col="red",pch=20)
         }else{
-        points(eixox[i],sort(qq0$y)[i],col="green")
+        points(eixox[i],sort(qq0$y)[i],col="green",pch=20)
         }
       }
       lines(eixox, media)
