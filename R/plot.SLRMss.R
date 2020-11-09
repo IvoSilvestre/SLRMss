@@ -47,7 +47,7 @@ plot.SLRMss <-
       media <- colMeans(mrq)
       faixay <- range(mrq, rqobs)
       qq0 <- qqnorm(rqobs, main = "Envelope plot",xlab="Quantile N(0,1)",
-                    pch = 1,col = "white",ylim = faixay)
+                    pch = 1,col = "white")
       eixox <- sort(qq0$x)
       for(i in 1:length(qq0$x)){
         if(sort(qq0$y)[i]<infsup[1,i] | sort(qq0$y)[i]>infsup[2,i]){
