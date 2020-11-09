@@ -34,7 +34,7 @@ plot.SLRMss <-
         Yj <- rfam(n, fv, sige)
         form=as.formula(paste("Yj ~ ",paste(colnames(fit$X)[-1],
                                             collapse="+")))
-        mj <- slrmss(form,
+        mj <- SLRMss(form,
                      data = data.frame(Yj,fit$X),statistic="Wald",
                      testingbeta = colnames(fit$X)[2],family=family,
                      xi=fit$xi)
