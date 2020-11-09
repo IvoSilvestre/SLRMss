@@ -1,5 +1,5 @@
 plot.SLRMss <-
-  function(fit,conf=0.95){
+  function(fit,conf=0.95,seed=2612){
     family=fit$family
     if(family=="Normal"){
       qfam = function(x,mu,sigma){qnorm(x,mu,sigma)}
@@ -22,7 +22,7 @@ plot.SLRMss <-
         }
       }
     }
-      set.seed(2612)
+      set.seed(seed)
       y=fit$y
       n=length(y)
       J=100
