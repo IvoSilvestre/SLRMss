@@ -48,12 +48,12 @@ plot.SLRMss <-
       faixay <- range(mrq, rqobs)
       qq0 <- qqnorm(rqobs, main = "Envelope plot",xlab="Quantile N(0,1)",
                     pch = 20,col = "blue",ylim = faixay)
+      eixox <- sort(qq0$x)
       for(i in 1:length(qq0$x)){
-        if(qq0$y[i]<infsup[1,i] & rqobs[i]>infsup[2,i]){
-        points(qq0$x[i],qq0$y[i],col="red")
+        if(sort(qq0$y[i])<infsup[1,i] | sort(qq0$y)>infsup[2,i]){
+        points(eixox[i],sort(qq0$y)[i],col="red")
         }  
       }
-      eixox <- sort(qq0$x)
       lines(eixox, media)
       lines(eixox, infsup[1,])
       lines(eixox, infsup[2,]) 
