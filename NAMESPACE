@@ -1,4 +1,4 @@
-export(SLRMss,orange,cheese)
+exportPattern(".")
 
 S3method(print, SLRMss)
 S3method(plot, SLRMss)
