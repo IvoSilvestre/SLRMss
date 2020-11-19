@@ -5,7 +5,7 @@
 %%  ~~function to do ... ~~
 }
 \usage{
-\S3method{plot}{SLRMss}(fit)}
+\S3method{plot}{SLRMss}(fit, conf=0.95, seed=2612)}
 \arguments{
 \item{fit}{an object of class 'SLRMss'.}
 \item{conf}{the confidence level. 0.95 by default.}
