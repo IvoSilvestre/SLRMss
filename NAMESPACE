@@ -1,1 +1,7 @@
-exportPattern("^[[:alpha:]]+")
+export(SLRMss)
+
+export(orange,cheese)
+
+S3method(print, SLRMss)
+S3method(plot, SLRMss)
+S3method(summary, SLRMss)
