@@ -1,6 +1,4 @@
-export(SLRMss,SLRMss)
-
-export(orange,cheese)
+export(SLRMss,orange,cheese)
 
 S3method(print, SLRMss)
 S3method(plot, SLRMss)
