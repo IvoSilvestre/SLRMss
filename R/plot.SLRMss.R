@@ -1,5 +1,5 @@
-function (fit, conf = 0.95, seed = 2612) 
-{
+plot.SLRMss <-
+function (fit, conf = 0.95, seed = 2612) {
     family = fit$family
     if (family == "Normal") {
         qfam = function(x, mu, sigma) {
