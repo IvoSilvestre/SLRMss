@@ -7,6 +7,9 @@ plot.SLRMss <-
       rfam = function(x,mu,sigma){rnorm(x,mu,sigma)}
     }else{
       if(family=="Student"){
+        if(fit$xi>2){cs=fit$xi/(fit$xi-2)}
+        else{cs=1}
+        sigma = sigma*sqrt(cs)
         qfam = function(x,mu,sigma){sigma*qt(x,df=fit$xi)+mu}
         pfam = function(x,mu,sigma){pt((x-mu)/sigma,df=fit$xi)}
         rfam = function(x,mu,sigma){sigma*rt(x,df=fit$xi)+mu}
@@ -28,7 +31,7 @@ plot.SLRMss <-
       J=100
       fv=fit$beta.fitted
       sige=fit$phi[1,1]
-      rqobs <- qfam(pfam(fit$std.residuals, 0, 1),mu=0,sigma=1)
+      rqobs <- qfam(pfam(fit$y, fv, sige),mu=0,sigma=1)
       mrq <- matrix(NA, J, n)
       for (j in 1:J) {
         Yj <- rfam(n, fv, sige)
@@ -38,7 +41,7 @@ plot.SLRMss <-
                      data = data.frame(Yj,fit$X),statistic="Wald",
                      testingbeta = colnames(fit$X)[2],family=family,
                      xi=fit$xi)
-        mrq[j,] <- qfam(pfam(mj$std.residuals, 0, 1),mu=0,sigma=1)
+        mrq[j,] <- qfam(pfam(mj$y, mj$beta.fitted, mj$phi[1,1]),mu=0,sigma=1)
         mrq[j,] <- sort(mrq[j,])
       }
       conf <- 0.95
