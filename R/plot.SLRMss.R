@@ -55,7 +55,7 @@ function (fit, conf = 0.95, seed = 2612) {
     J = 100
     fv = fit$beta.fitted
     sige = fit$phi[1, 1]
-    rqobs <- qfam(pfam(fit$std.residuals, 0, 1), mu = 0, sigma = 1)
+    rqobs <- fit$std.residuals
     mrq <- matrix(NA, J, n)
     for (j in 1:J) {
         Yj <- rfam(n, fv, sige)
@@ -64,8 +64,7 @@ function (fit, conf = 0.95, seed = 2612) {
         mj <- SLRMss(form, data = data.frame(Yj, fit$X), statistic = "Wald", 
             testingbeta = colnames(fit$X)[2], family = family, 
             xi = fit$xi)
-        mrq[j, ] <- qfam(pfam(mj$std.residuals, 0, 1), mu = 0, 
-            sigma = 1)
+        mrq[j, ] <- mj$std.residuals
         mrq[j, ] <- sort(mrq[j, ])
     }
     conf <- 0.95
