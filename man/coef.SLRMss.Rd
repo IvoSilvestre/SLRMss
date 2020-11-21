@@ -1,7 +1,7 @@
 \name{coef.SLRMss}
 \alias{coef.SLRMss}
 %- Also NEED an '\alias' for EACH other topic documented here.
-\title{print.SLRMss
+\title{fitted.SLRMss
 %%  ~~function to do ... ~~
 }
 \usage{
