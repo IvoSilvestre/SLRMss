@@ -1,0 +1,12 @@
+coef.SLRMss<-
+  function(fit,H0=FALSE){
+  out=NULL
+  if(H0==FALSE){
+  out$beta=fit$beta.coefficients
+  out$phi=fit$phi
+  }else{
+  out$beta=fit$beta.coefficients.h0
+  out$phi=fit$phi.h0
+  }
+  return(out)
+} 
