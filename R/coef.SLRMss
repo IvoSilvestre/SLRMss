@@ -2,11 +2,11 @@ coef.SLRMss<-
   function(fit,H0=FALSE){
   out=NULL
   if(H0==FALSE){
-  out$beta=fit$beta.coefficients
-  out$phi=fit$phi
+  out$beta=fit$beta.coefficients[,1]
+  out$phi=fit$phi[,1]
   }else{
-  out$beta=fit$beta.coefficients.h0
-  out$phi=fit$phi.h0
+  out$beta=fit$beta.coefficients.h0[,1]
+  out$phi=fit$phi.h0[,1]
   }
   return(out)
 } 
