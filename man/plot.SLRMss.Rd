@@ -6,6 +6,7 @@
 }
 \usage{
 \S3method{plot}{SLRMss}(fit, conf=0.95, seed=2612, H0=F)
+}  
 \arguments{
 \item{fit}{an object of class 'SLRMss'.}
 \item{conf}{the confidence level. 0.95 by default.}
