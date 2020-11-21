@@ -4,7 +4,7 @@ Symmetric linear regression models for small samples.
 # Set up
 Steps to obtain the Wald, likelihood ratio, score, and gradient tests and the corrected likelihood ratio, score, and gradient tests in small-sized and moderate-sized samples in symmetric linear regression models, see Medeiros, F. M. C. and Ferrari, S.L.P (2017):
 
-1. Open your *R* or *Rstudio
+1. Open your *R* or *Rstudio*
 1. Use the following code
    ```r
    devtools::install_github("IvoSilvestre/SLMRss")
