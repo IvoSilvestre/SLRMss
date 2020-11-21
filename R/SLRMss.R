@@ -69,7 +69,7 @@ SLRMss<-
                h= function(u){
                  exp(-u/2)/sqrt(2*pi)
                }
-               cs=1
+               #cs=1
                Wchapeu=diag(1,n)
                Wtil=diag(1,n)
                delta00010=0;delta20000 = 1;delta01002=-1;delta00103=0;
@@ -81,7 +81,7 @@ SLRMss<-
                h= function(u){
                  xi^(xi/2)/beta(1/2,xi/2)*(xi+u)^(-(xi+1)/2)
                }
-               cs=xi/(1+xi)
+               #cs=xi/(xi-2)
                Wchapeu=diag(c((xi+1)/(xi+(echapeu/phichapeu)^2)),nrow=n)
                Wtil=diag(c((xi+1)/(xi+(etil/phitil)^2)),nrow=n)
                delta00010=6*(xi+1)*(xi+2)/(xi*(xi+5)*(xi+7));delta20000 = (xi+1)/(xi+3)
@@ -98,7 +98,7 @@ SLRMss<-
                  C=gamma(1+(1+xi)/2)*2^(1+(1+xi)/2)
                  return(exp(-u^(1/(1+xi))/2)/C)
                }
-               cs=2^(1+xi)*gamma(3/2*(1+xi))/gamma((1+xi)/2)
+               #cs=2^(1+xi)*gamma(3/2*(1+xi))/gamma((1+xi)/2)
                Wchapeu=diag(c(1/((1+xi)*(((echapeu/phichapeu)^2)^(xi/(1+xi))))),nrow=n)
                Wtil=diag(c(1/((1+xi)*(((etil/phitil)^2)^(xi/(1+xi))))),nrow=n)
                if(-1<xi & xi<1/3){
@@ -152,7 +152,7 @@ SLRMss<-
         h=function(u){
           exp(sqrt(u))/(1+exp(sqrt(u)))^2
         }
-        cs=pi^2/3
+        #cs=pi^2/3
         W=function(beta,phi,X){
           z=abs((y-X%*%beta)/phi)
           diag(c((exp(z)-1)/(z*(1+exp(z)))))
@@ -395,7 +395,7 @@ SLRMss<-
     df= q
     
     residuals=y-X%*%betachapeu
-    std.residuals=residuals/(phichapeu*sqrt(cs))
+    std.residuals=residuals/(phichapeu)
     
     
     call=match.call()
