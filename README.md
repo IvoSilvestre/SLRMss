@@ -9,7 +9,7 @@ Steps to obtain the Wald, likelihood ratio, score, and gradient tests and the co
    ```r
    devtools::install_github("IvoSilvestre/SLMRss")
    ```
-1. Type `help(slrmss)` to see the function syntax.
+1. Type `help(SLRMss)` to see the function syntax.
    
 # Reference
 
