@@ -1,18 +1,9 @@
 residuals.SLRMss <-
 function(fit,H0=FALSE,std=FALSE){
-  if(H0==FALSE){
-    if(std==F){
-    return(fit$residuals)
-    }else{
-    return(fit$std.residuals)
-    }
-  ]else{
-    if(std==F){
-    res=(fit$y-fited(fit,H0=T))
-    return(res)
-    }else{
-    return(res/fit$phi.h0)
-    }
-  }
-
+   res=(fit$y-fited(fit,H0=H0))
+   if(std==T){
+   return(res/coef(fit,H0=H0))  
+   }else{
+   return(res)  
+   }
 }
