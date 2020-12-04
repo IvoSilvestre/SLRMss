@@ -73,7 +73,7 @@ function (fit, conf = 0.95, seed = 2612, H0=F)
         (1 + conf)/2), type = 6)
     media <- colMeans(mrq)
     faixay <- range(mrq, rqobs)
-    qq0 <- qqnorm(rqobs, main = paste("Envelope plot -",conf,"% confidence"), xlab = "Quantile N(0,1)", 
+    qq0 <- qqnorm(rqobs, main = paste("Envelope plot -",100*conf,"% confidence"), xlab = "Quantile N(0,1)", 
         pch = 1, col = "white", ylim = faixay)
     eixox <- sort(qq0$x)
     for (i in 1:length(qq0$x)) {
