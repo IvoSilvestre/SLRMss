@@ -6,8 +6,6 @@ SLRMss<-
     
     if(family=="Normal"|family=="Student"|family=="Powerexp"){
       
-      
-      library(ssym)
       f1 = toString(formula[2])
       f2 = toString(formula[3])
       if(missingArg(data)) a <- ssym.l(formula, family=family, xi=xi)
