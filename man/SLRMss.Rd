@@ -39,7 +39,7 @@ respectively)
 \item{phi}{a numeric value with the estimated precision paramater under alternative hypothesis.}
 \item{beta.coefficients.h0}{a matrix with the estimated position parameters under null hypothesis.}
 \item{phi.h0}{a numeric value with the estimated precision paramater under null hypothesis.}
-\item{beta.fitted}{a vector with the fitted values of the model.}
+\item{y.fitted}{a vector with the fitted values of the model.}
 \item{null.hypothesis}{the description of the null hypothesis.}
 \item{statistics}{a matrix with the selected statistics and theirs p-values.}
 \item{statistic.distribution}{the name of the statistics' distribution used to test null hypothesis. It always return "Chi-Squared".}
