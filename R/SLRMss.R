@@ -21,7 +21,7 @@ SLRMss<-
         stop("No variable in testingbeta was in formula")
       }
       q = sum(colnames(X)%in%testingbeta)
-      if(sum(testingbeta%in%colnames(X))<q){
+      if(length(testingbeta)>q){
         warning(paste0("Variable(s) ",paste(testingbeta[!(testingbeta %in% colnames(X)),collapse=","])," ignored."))
       }
       p = length(betachapeu)
@@ -149,7 +149,13 @@ SLRMss<-
         }
         n=length(y)
         betash0 = which(colnames(X)%in%testingbeta)
-        q = length(testingbeta)
+        if(sum(colnames(X)%in%testingbeta)==0){
+          stop("No variable in testingbeta was in formula")
+        }
+        q = sum(colnames(X)%in%testingbeta)
+         if(length(testingbeta)>q){
+        warning(paste0("Variable(s) ",paste(testingbeta[!(testingbeta %in% colnames(X)),collapse=","])," ignored."))
+         }
         beta0=solve(crossprod(X))%*%crossprod(X,y)
         phi0=as.numeric(sqrt(crossprod(y-X%*%beta0)/n))
         m=length(beta0)+1
