@@ -44,7 +44,8 @@ respectively)
 \item{statistics}{a matrix with the selected statistics and theirs p-values.}
 \item{statistic.distribution}{the name of the statistics' distribution used to test null hypothesis. It always return "Chi-Squared".}
 \item{df}{the degrees of freedom of the statistics' distribution. It's the length of the testingbeta vector.}
-\item{std.residuals}{the standardized residuals.}
+\item{residuals}{the difference among the real y values and the fitted y.}
+\item{std.residuals}{the residuals divided by the precision parameter}
 \item{AICc}{the corrected Akaike Information Criterion for small samples.}
 \item{BIC}{the Bayesian Information Criterion.}
 %%  ~Describe the value returned
