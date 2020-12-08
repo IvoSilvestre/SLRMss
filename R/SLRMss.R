@@ -34,7 +34,7 @@ SLRMss<-
              formula2=formula(paste(f1,"~",paste0(colnames(X2)[-1],collapse = "+")))
             }
         }else{
-          formula2=formula(paste(f1,"~","-1",paste0(colnames(X2),collapse = "+")))
+          formula2=formula(paste(f1,"~","-1 + ",paste0(colnames(X2),collapse = "+")))
         }
         b=ssym.l(formula2, data=data,family=family,xi=xi)
         betatil=b$theta.mu
