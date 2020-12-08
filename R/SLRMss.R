@@ -154,9 +154,10 @@ SLRMss<-
           stop("No variable in testingbeta was in formula")
         }
         q = sum(colnames(X)%in%testingbeta)
-         if(length(testingbeta)>q){
-        warning(paste0("Variable(s) ",paste(testingbeta[!(testingbeta %in% colnames(X)),collapse=","])," ignored."))
-         }
+        if(length(testingbeta)>q){
+          warning(paste0("Variable(s) ",paste(testingbeta[!(testingbeta %in% colnames(X))],collapse=",")," ignored."))
+        }
+        testingbeta=testingbeta[(testingbeta %in% colnames(X))]
         beta0=solve(crossprod(X))%*%crossprod(X,y)
         phi0=as.numeric(sqrt(crossprod(y-X%*%beta0)/n))
         m=length(beta0)+1
