@@ -8,7 +8,7 @@
 %%  ~~ A concise (1-5 lines) description of what the function does. ~~
 }
 \usage{
-SLRMss(formula, family, xi, statistic, testingbeta, data=NULL)
+SLRMss(formula, family, xi, statistic, testingbeta, data)
 }
 %- maybe also 'usage' for other objects documented here.
 \arguments{
