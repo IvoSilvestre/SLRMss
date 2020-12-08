@@ -63,7 +63,7 @@ function (fit, conf = 0.95, seed = 2612, H0=F)
         form = as.formula(paste("Yj ~ ", paste(colnames(fit$X)[-1], 
             collapse = "+")))
         mj <- SLRMss(form, data = data.frame(Yj, fit$X), statistic = "Wald", 
-            testingbeta = colnames(fit$X)[2], family = family, 
+            testingbeta = fit$testingbeta, family = family, 
             xi = fit$xi)
         mrq[j, ] <- residuals(mj,H0=H0,std=T)
         mrq[j, ] <- sort(mrq[j, ])
