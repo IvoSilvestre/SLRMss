@@ -24,6 +24,7 @@ SLRMss<-
       if(length(testingbeta)>q){
         warning(paste0("Variable(s) ",paste(testingbeta[!(testingbeta %in% colnames(X))],collapse=",")," ignored."))
       }
+      testingbeta=estingbeta[(testingbeta %in% colnames(X))]
       p = length(betachapeu)
       m = p+1
       
