@@ -18,7 +18,7 @@ SLRMss<-
       echapeu= y-X%*%betachapeu
       betash0 = which(colnames(X)%in%testingbeta)
       if(sum(colnames(X)%in%testingbeta==0){
-        Error("No variable in testingbeta was in formula")
+        stop("No variable in testingbeta was in formula")
       }
       q = sum(colnames(X)%in%testingbeta)
       if(sum(testingbeta%in$colnames(X))<q){
