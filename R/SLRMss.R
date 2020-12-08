@@ -27,10 +27,14 @@ SLRMss<-
         X2 = as.matrix(X[,!colnames(X)%in%testingbeta])
         colnames(X2)=colnames(X)[!colnames(X)%in%testingbeta]
         R= X1 - X2%*%solve(crossprod(X2))%*%crossprod(X2,X1)
-        if(all(X2[,1]==1)){
+        if(names(X2)[1]=="(Intercept)"){
           formula2=formula(paste(f1,"~",paste0(colnames(X2)[-1],collapse = "+")))
         }else{
+          if(ncol(X2)==1){
+            formula2=formula(paste(f1,"~","1"))
+            }else{ 
           formula2=formula(paste(f1,"~","-1",paste0(colnames(X2),collapse = "+")))
+            }
         }
         b=ssym.l(formula2, data=data,family=family,xi=xi)
         betatil=b$theta.mu
