@@ -87,6 +87,9 @@ fit<-SLRMss(emulsion~arabicgum+xanthangum+orangeoil,family="Student",xi=3,
 testingbeta="xanthangum",statistic="LR",data=orange)
 summary(fit)
 plot(fit)
+coef(fit)
+residuals(fit,std=T)
+fitted(fit)
 ###############################################################
 ###############################################################
 #Using the cheese data frame to fit the cohesiveness and test xanthan gum percentage and sodium caseinate percentage.
