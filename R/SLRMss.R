@@ -21,7 +21,7 @@ SLRMss<-
         stop("No variable in testingbeta was in formula")
       }
       q = sum(colnames(X)%in%testingbeta)
-      if(sum(testingbeta%in$colnames(X))<q){
+      if(sum(testingbeta%in%colnames(X))<q){
         warning(paste0("Variable(s) ",paste(testingbeta[!(testingbeta%in$colnames(X)),collapse=","])," ignored."))
       }
       p = length(betachapeu)
