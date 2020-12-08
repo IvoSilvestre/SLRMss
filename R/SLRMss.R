@@ -67,7 +67,6 @@ SLRMss<-
                h= function(u){
                  exp(-u/2)/sqrt(2*pi)
                }
-               #cs=1
                Wchapeu=diag(1,n)
                Wtil=diag(1,n)
                delta00010=0;delta20000 = 1;delta01002=-1;delta00103=0;
@@ -79,7 +78,6 @@ SLRMss<-
                h= function(u){
                  xi^(xi/2)/beta(1/2,xi/2)*(xi+u)^(-(xi+1)/2)
                }
-               #cs=xi/(xi-2)
                Wchapeu=diag(c((xi+1)/(xi+(echapeu/phichapeu)^2)),nrow=n)
                Wtil=diag(c((xi+1)/(xi+(etil/phitil)^2)),nrow=n)
                delta00010=6*(xi+1)*(xi+2)/(xi*(xi+5)*(xi+7));delta20000 = (xi+1)/(xi+3)
@@ -96,7 +94,6 @@ SLRMss<-
                  C=gamma(1+(1+xi)/2)*2^(1+(1+xi)/2)
                  return(exp(-u^(1/(1+xi))/2)/C)
                }
-               #cs=2^(1+xi)*gamma(3/2*(1+xi))/gamma((1+xi)/2)
                Wchapeu=diag(c(1/((1+xi)*(((echapeu/phichapeu)^2)^(xi/(1+xi))))),nrow=n)
                Wtil=diag(c(1/((1+xi)*(((etil/phitil)^2)^(xi/(1+xi))))),nrow=n)
                if(-1<xi & xi<1/3){
@@ -331,7 +328,7 @@ SLRMss<-
             cT = (AT11 - AT22)/(12*q)
             stcor = st*(1-(cT+bT*st))
           }else{
-            stop("Put an available statistic: 'Wald', 'LR','Score' or 'Gradient'. ")
+            stop("The available statistics are: 'Wald', 'LR','Score' or 'Gradient'. ")
           }
         }
       }
