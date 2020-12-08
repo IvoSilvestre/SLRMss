@@ -1,5 +1,5 @@
 SLRMss<- 
-  function(formula, family, xi, statistic, testingbeta, data=NULL){
+  function(formula, family, xi, statistic, testingbeta,data){
     if(!is.character(testingbeta)){
       stop("Error: There are no corresponding variable.")
     }
