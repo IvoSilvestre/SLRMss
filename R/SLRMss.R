@@ -399,7 +399,7 @@ SLRMss<-
     call=match.call()
     out=list(formula=formula,residuals=residuals,std.residuals=std.residuals,beta.coefficients=mu,
              phi=phi,beta.coefficients.h0=mu0,phi.h0=phi0,X=X,y=y,
-             beta.fitted=X%*%betachapeu,null.hypothesis=text1,statistics=estatisticas,
+             y.fitted=X%*%betachapeu,null.hypothesis=text1,statistics=estatisticas,
              statistic.distribution=distribution,df=df,family=family,
              xi=xi,testingbeta=testingbeta,AICc=aic,BIC=bic,call=call)
     class(out)="SLRMss"
