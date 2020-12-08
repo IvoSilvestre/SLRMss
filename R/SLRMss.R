@@ -17,7 +17,13 @@ SLRMss<-
       betachapeu = a$theta.mu
       echapeu= y-X%*%betachapeu
       betash0 = which(colnames(X)%in%testingbeta)
-      q = length(testingbeta)
+      if(sum(colnames(X)%in%testingbeta==0){
+        Error("No variable in testingbeta was in formula")
+      }
+      q = sum(colnames(X)%in%testingbeta)
+      if(sum(testingbeta%in$colnames(X))<q){
+        warning(paste0("Variable(s) ",paste(testingbeta[!(testingbeta%in$colnames(X)),collapse=","])," ignored."))
+      }
       p = length(betachapeu)
       m = p+1
       
@@ -151,7 +157,6 @@ SLRMss<-
         h=function(u){
           exp(sqrt(u))/(1+exp(sqrt(u)))^2
         }
-        #cs=pi^2/3
         W=function(beta,phi,X){
           z=abs((y-X%*%beta)/phi)
           diag(c((exp(z)-1)/(z*(1+exp(z)))))
