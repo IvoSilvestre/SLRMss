@@ -1,7 +1,7 @@
 SLRMss<- 
   function(formula, family, xi, statistic, testingbeta,data){
     if(!is.character(testingbeta)){
-      stop("Error: There are no corresponding variable.")
+      stop("Error: testingbeta must be in character.")
     }
     
     if(family=="Normal"|family=="Student"|family=="Powerexp"){
@@ -121,6 +121,8 @@ SLRMss<-
                  delta30001=-2^(2-xi)*gamma((5-xi)/2)/(aux1^3*aux2)
                  delta40002=2^(3-xi)*gamma((7-xi)/2)/(aux1^4*aux2)
                  delta21002=2^(2-xi)*(xi-1)*gamma((5-xi)/2)/(aux1^4*aux2)
+               }else{
+                  stop{"Error: xi must be among (-1,1/3)."}  
                }
              }
              
