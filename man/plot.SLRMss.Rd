@@ -5,7 +5,7 @@
 %%  ~~function to do ... ~~
 }
 \usage{
-\S3method{plot}{SLRMss}(fit, conf=0.95, seed=2612, H0=F)
+\S3method{plot}{SLRMss}(fit, conf=0.95, seed=2612, xlab=NULL, ylab=NULL, main=NULL)
 }  
 \arguments{
 \item{fit}{an object of class 'SLRMss'.}
