@@ -5,7 +5,7 @@
 %%  ~~function to do ... ~~
 }
 \usage{
-\S3method{fitted}{SLRMss}(fit,H0=F)
+\S3method{fitted}{SLRMss}(fit,H0=FALSE)
 }
 \arguments{
 \item{fit}{an object of class 'SLRMss'.}
