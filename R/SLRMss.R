@@ -1,7 +1,7 @@
 SLRMss<- 
   function(formula, family, xi, statistic, testingbeta,data){
     if(!is.character(testingbeta)){
-      stop("Error: testingbeta must be in character.")
+      stop("testingbeta must be in character.")
     }
     
     if(family=="Normal"|family=="Student"|family=="Powerexp"){
@@ -122,7 +122,7 @@ SLRMss<-
                  delta40002=2^(3-xi)*gamma((7-xi)/2)/(aux1^4*aux2)
                  delta21002=2^(2-xi)*(xi-1)*gamma((5-xi)/2)/(aux1^4*aux2)
                }else{
-                  stop("Error: xi must be among (-1,1/3).")  
+                  stop("xi must be among (-1,1/3).")  
                }
              }
              
@@ -276,7 +276,7 @@ SLRMss<-
         
         
       }else{
-        stop("Error: family is not supported.")
+        stop("Family is not supported.")
       }
     }
     
