@@ -122,7 +122,7 @@ SLRMss<-
                  delta40002=2^(3-xi)*gamma((7-xi)/2)/(aux1^4*aux2)
                  delta21002=2^(2-xi)*(xi-1)*gamma((5-xi)/2)/(aux1^4*aux2)
                }else{
-                  stop{"Error: xi must be among (-1,1/3)."}  
+                  stop("Error: xi must be among (-1,1/3).")  
                }
              }
              
