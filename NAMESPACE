@@ -1,5 +1,11 @@
 exportPattern(".")
 
+importFrom("graphics", "lines", "points")
+importFrom("methods", "missingArg")
+importFrom("stats", "as.formula", "coef", "fitted", "model.matrix",
+             "nlm", "nlminb", "optim", "pchisq", "plogis", "pnorm", "pt",
+             "qlogis", "qnorm", "qqnorm", "qt", "quantile", "residuals",
+             "rlogis", "rnorm", "rt", "sd")
 S3method(print, SLRMss)
 S3method(plot, SLRMss)
 S3method(summary, SLRMss)
