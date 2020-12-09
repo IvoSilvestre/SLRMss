@@ -9,4 +9,4 @@ Description: A function to obtain ordinary and modified statistics for symmetric
 License: GLP-3
 NeedsCompilation: no
 Packaged: 2020-05-08 18:23:38 UTC; ivosi
-Depends: R (>= 3.5.0), ssym, nleqslv
+Depends: R (>= 3.5.0), methods, ssym, nleqslv
