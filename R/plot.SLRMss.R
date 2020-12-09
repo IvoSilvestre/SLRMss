@@ -1,5 +1,5 @@
 plot.SLRMss <-
-function (fit, conf = 0.95, seed = 2612, H0=F,xlab=NULL,ylab=NULL,main=NULL) 
+function (fit, conf = 0.95, seed = 2612, H0=FALSE,xlab=NULL,ylab=NULL,main=NULL) 
 {
     family = fit$family
     if (family == "Normal") {
@@ -56,7 +56,7 @@ function (fit, conf = 0.95, seed = 2612, H0=F,xlab=NULL,ylab=NULL,main=NULL)
     J = 100
     fv = fitted(fit,H0=H0)
     sige = coef(fit,H0=H0)$phi
-    rqobs <- residuals(fit,H0=H0,std=T)
+    rqobs <- residuals(fit,H0=H0,std=TRUE)
     mrq <- matrix(NA, J, n)
     for (j in 1:J) {
         Yj <- rfam(n, fv, sige)
@@ -65,7 +65,7 @@ function (fit, conf = 0.95, seed = 2612, H0=F,xlab=NULL,ylab=NULL,main=NULL)
         mj <- SLRMss(form, data = data.frame(Yj, fit$X), statistic = "Wald", 
             testingbeta = fit$testingbeta, family = family, 
             xi = fit$xi)
-        mrq[j, ] <- residuals(mj,H0=H0,std=T)
+        mrq[j, ] <- residuals(mj,H0=H0,std=TRUE)
         mrq[j, ] <- sort(mrq[j, ])
     }
     conf <- 0.95
