@@ -5,7 +5,7 @@
 %%  ~~function to do ... ~~
 }
 \usage{
-\S3method{residuals}{SLRMss}(fit,H0=F,std=F)
+\S3method{residuals}{SLRMss}(fit,H0=FALSE,std=FALSE)
 }
 \arguments{
 \item{fit}{an object of class 'SLRMss'.}
