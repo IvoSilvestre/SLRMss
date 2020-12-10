@@ -5,10 +5,10 @@
 %%  ~~function to do ... ~~
 }
 \usage{
-\S3method{fitted}{SLRMss}(fit,H0=FALSE)
+\S3method{fitted}{SLRMss}(object,H0=FALSE)
 }
 \arguments{
-\item{fit}{an object of class 'SLRMss'.}
+\item{object}{an object of class 'SLRMss'.}
 \item{H0}{if TRUE, choose the fitted values under null hypothesis, if FALSE, choose the fitted values under alternative hypothesis (default).}
 }
 \description{
