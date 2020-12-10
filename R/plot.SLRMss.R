@@ -1,6 +1,7 @@
 plot.SLRMss <-
-function (fit, conf = 0.95, seed = 2612, H0=FALSE,xlab=NULL,ylab=NULL,main=NULL) 
-{
+function (x, conf = 0.95, seed = 2612, H0=FALSE,xlab=NULL,ylab=NULL,main=NULL) 
+{   
+    fit = x
     family = fit$family
     if (family == "Normal") {
         qfam = function(x, mu, sigma) {
@@ -15,35 +16,17 @@ function (fit, conf = 0.95, seed = 2612, H0=FALSE,xlab=NULL,ylab=NULL,main=NULL)
     }
     else {
         if (family == "Student") {
-            qfam = function(x, mu, sigma) {
-                sigma * qt(x, df = fit$xi) + mu
-            }
-            pfam = function(x, mu, sigma) {
-                pt((x - mu)/sigma, df = fit$xi)
-            }
             rfam = function(x, mu, sigma) {
                 sigma * rt(x, df = fit$xi) + mu
             }
         }
         else {
             if (family == "Logistic") {
-                qfam = function(x, mu, sigma) {
-                  qlogis(x, mu, sigma)
-                }
-                pfam = function(x, mu, sigma) {
-                  plogis(x, mu, sigma)
-                }
                 rfam = function(x, mu, sigma) {
                   rlogis(x, mu, sigma)
                 }
             }
             else {
-                qfam = function(x, mu, sigma) {
-                  qnormp(x, mu, sigma, p = 2/(fit$xi + 1))
-                }
-                pfam = function(x, mu, sigma) {
-                  pnormp(x, mu, sigma, p = 2/(fit$xi + 1))
-                }
                 rfam = function(x, mu, sigma) {
                   rnormp(x, mu, sigma, p = 2/(fit$xi + 1))
                 }
