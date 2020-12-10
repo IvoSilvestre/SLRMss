@@ -4,8 +4,8 @@ summary.SLRMss<-
     out$call=match.call()
     out$beta=round(object$beta.coefficients,4)
     out$phi=round(object$phi,4)
-    out$betah0=round(object$beta.coefficients.h0,4)
-    out$phih0=round(object$phi.h0,4)
+    out$beta.h0=round(object$beta.coefficients.h0,4)
+    out$phi.h0=round(object$phi.h0,4)
     out$null.hypotesis=object$nul 
     out$statistics=round(object$statistics,4)
     out$statistic.distribution=object$statistic.distribution
