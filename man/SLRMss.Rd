@@ -74,7 +74,8 @@ Ivonaldo Silvestre da Silva-Junior <ivonaldojunior@hotmail.com.br> and Francisco
 }
 
 \examples{
-#Using the orange data frame to fit the emulsion density and testing the xanthan gum quantity.
+# Using the orange data frame to fit the emulsion density and 
+# testing the xanthan gum quantity.
 
 data(orange)
 
@@ -93,7 +94,8 @@ residuals(fit,std=TRUE)
 fitted(fit)
 ###############################################################
 ###############################################################
-#Using the cheese data frame to fit the cohesiveness and test xanthan gum percentage and sodium caseinate percentage.
+# Using the cheese data frame to fit the cohesiveness and test xanthan gum percentage4
+# and sodium caseinate percentage.
 
 data(cheese)
 
