@@ -17,16 +17,12 @@
     \item{\code{sodcase}}{the sodium caseinate percentage}
   }
 }
-\details{
-%%  ~~ If necessary, more details than the __description__ above ~~
-}
+
 \source{
 Nateghi, L., Roohinejad, S., Totosaus, A., Mirhosseini, H., Shuhaimi, M., Meimandipour, A., Omidizadeh, A., Manap, M.Y.A (2012). Optimization of textural properties and formulation of reduced fat Cheddar cheeses containing fat replacers. Journal of Food, Agriculture & Environment.
 %%  ~~ reference to a publication or URL from which the data were obtained ~~
 }
-\references{
-%%  ~~ possibly secondary sources and usages ~~
-}
+
 \examples{
 data(cheese)
 plot(cheese)
