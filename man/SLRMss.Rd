@@ -63,15 +63,6 @@ Statistica Neerlandica 2017.
 Ivonaldo Silvestre da Silva-Junior <ivonaldojunior@hotmail.com.br> and Francisco Moises C. de Medeiros
 %%  ~~who you are~~
 }
-\note{
-%%  ~~further notes~~
-}
-
-%% ~Make other sections like Warning with \section{Warning }{....} ~
-
-\seealso{
-%% ~~objects to See Also as \code{\link{help}}, ~~~
-}
 
 \examples{
 # Using the orange data frame to fit the emulsion density and 
