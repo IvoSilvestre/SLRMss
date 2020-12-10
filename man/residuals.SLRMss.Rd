@@ -5,10 +5,10 @@
 %%  ~~function to do ... ~~
 }
 \usage{
-\S3method{residuals}{SLRMss}(fit,H0=FALSE,std=FALSE)
+\S3method{residuals}{SLRMss}(object,H0=FALSE,std=FALSE)
 }
 \arguments{
-\item{fit}{an object of class 'SLRMss'.}
+\item{object}{an object of class 'SLRMss'.}
 \item{H0}{if TRUE, choose the residuals under null hypothesis, if FALSE, choose the residuals under alternative hypothesis (default).}
 \item{std}{if TRUE, choose the standardized residuals, if FALSE, choose the non-standardized residuals (default).}
 }
