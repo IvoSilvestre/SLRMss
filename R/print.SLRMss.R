@@ -1,14 +1,14 @@
 print.SLRMss<-
-  function(fit){
+  function(x){
   cat("Call:\n")
-  print(fit$call)
+  print(x$call)
   cat("\nBeta Coefficients:\n")
-  print(round(fit$beta.coefficients[,1],4))
+  print(round(x$beta.coefficients[,1],4))
   cat("\nPhi:\n") 
-  print(round(fit$phi[,1],4))
+  print(round(x$phi[,1],4))
   cat("\nAICc:\n")
-  print(fit$AIC)
+  print(x$AIC)
   cat("\nBIC:\n")
-  print(fit$BIC)
-  invisible(fit)
+  print(x$BIC)
+  invisible(x)
 }
