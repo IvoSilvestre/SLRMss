@@ -5,7 +5,7 @@
 %%  ~~function to do ... ~~
 }
 \usage{
-\S3method{print}{SLRMss}(fit)  
+\S3method{print}{SLRMss}(x)  
 }
 \description{
 Displays a succint summary of the fitted model. It includes the mean and dispersion parameter estimates, corrected Akaike information criterion and bayesian information criterion.
