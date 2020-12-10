@@ -1,16 +1,16 @@
 summary.SLRMss<-
-  function(fit){
+  function(object){
     out=NULL
     out$call=match.call()
-    out$beta=round(fit$beta.coefficients,4)
-    out$phi=round(fit$phi,4)
-    out$betah0=round(fit$beta.coefficients.h0,4)
-    out$phih0=round(fit$phi.h0,4)
-    out$null.hypotesis=fit$nul 
-    out$statistics=round(fit$statistics,4)
-    out$statistic.distribution=fit$statistic.distribution
-    out$df=fit$df
-    out$AICc=fit$AIC
-    out$BIC=fit$BIC
+    out$beta=round(object$beta.coefficients,4)
+    out$phi=round(object$phi,4)
+    out$betah0=round(object$beta.coefficients.h0,4)
+    out$phih0=round(object$phi.h0,4)
+    out$null.hypotesis=object$nul 
+    out$statistics=round(object$statistics,4)
+    out$statistic.distribution=object$statistic.distribution
+    out$df=object$df
+    out$AICc=object$AIC
+    out$BIC=object$BIC
     return(out)
   }
