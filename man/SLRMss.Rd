@@ -89,7 +89,7 @@ testingbeta="xanthangum",statistic="LR",data=orange)
 summary(fit)
 plot(fit)
 coef(fit)
-residuals(fit,std=T)
+residuals(fit,std=TRUE)
 fitted(fit)
 ###############################################################
 ###############################################################
