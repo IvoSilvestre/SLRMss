@@ -1,5 +1,5 @@
 plot.SLRMss <-
-function (x, conf = 0.95, seed = 2612, H0=FALSE,xlab=NULL,ylab=NULL,main=NULL) 
+function (x, conf = 0.95, seed = NULL, H0=FALSE,xlab=NULL,ylab=NULL,main=NULL) 
 {   
     fit = x
     family = fit$family
