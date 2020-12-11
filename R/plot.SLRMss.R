@@ -73,6 +73,5 @@ function (x, conf = 0.95, seed = NULL, H0=FALSE,xlab=NULL,ylab=NULL,main=NULL)
     out=NULL
     out$x=qq0$x
     out$y=qq0$y
-    return(out)
     invisible(out)
 }
