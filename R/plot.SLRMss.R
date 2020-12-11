@@ -70,4 +70,9 @@ function (x, conf = 0.95, seed = NULL, H0=FALSE,xlab=NULL,ylab=NULL,main=NULL)
     lines(eixox, media)
     lines(eixox, infsup[1, ])
     lines(eixox, infsup[2, ])
+    out=NULL
+    out$x=qq0$x
+    out$y=qq0$y
+    return(out)
+    invisible(out)
 }
