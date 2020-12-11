@@ -4,12 +4,6 @@ function (x, conf = 0.95, seed = 2612, H0=FALSE,xlab=NULL,ylab=NULL,main=NULL)
     fit = x
     family = fit$family
     if (family == "Normal") {
-        qfam = function(x, mu, sigma) {
-            qnorm(x, mu, sigma)
-        }
-        pfam = function(x, mu, sigma) {
-            pnorm(x, mu, sigma)
-        }
         rfam = function(x, mu, sigma) {
             rnorm(x, mu, sigma)
         }
@@ -55,7 +49,7 @@ function (x, conf = 0.95, seed = 2612, H0=FALSE,xlab=NULL,ylab=NULL,main=NULL)
     infsup <- apply(mrq, 2, quantile, probs = c((1 - conf)/2, 
         (1 + conf)/2), type = 6)
     media <- colMeans(mrq)
-    faixay <- range(mrq, rqobs)
+    faixay <- infsup
     if(is.null(xlab)) xlab="Quantile N(0,1)"
     if(is.null(ylab)) ylab="Sample Quantiles"
     if(is.null(main)) main=paste0("Envelope plot - ",100*conf,"% confidence")
