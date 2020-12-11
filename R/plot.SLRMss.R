@@ -49,7 +49,7 @@ function (x, conf = 0.95, seed = 2612, H0=FALSE,xlab=NULL,ylab=NULL,main=NULL)
     infsup <- apply(mrq, 2, quantile, probs = c((1 - conf)/2, 
         (1 + conf)/2), type = 6)
     media <- colMeans(mrq)
-    faixay <- infsup
+    faixay <- range(infsup)
     if(is.null(xlab)) xlab="Quantile N(0,1)"
     if(is.null(ylab)) ylab="Sample Quantiles"
     if(is.null(main)) main=paste0("Envelope plot - ",100*conf,"% confidence")
