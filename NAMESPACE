@@ -3,9 +3,8 @@ exportPattern(".")
 importFrom("graphics", "lines", "points")
 importFrom("methods", "missingArg")
 importFrom("stats", "as.formula", "coef", "fitted", "model.matrix",
-             "nlm", "nlminb", "optim", "pchisq", "plogis", "pnorm", "pt",
-             "qlogis", "qnorm", "qqnorm", "qt", "quantile", "residuals",
-             "rlogis", "rnorm", "rt", "sd")
+             "nlm", "nlminb", "optim", "pchisq", "qqnorm", 
+             "quantile", "residuals", "rnorm", "rt", "sd")
 importFrom("ssym","ssym.l")             
 importFrom("normalp","rnormp")             
              
