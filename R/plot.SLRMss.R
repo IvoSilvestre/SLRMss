@@ -45,7 +45,6 @@ function (x, conf = 0.95, seed = NULL, H0=FALSE,xlab=NULL,ylab=NULL,main=NULL)
         mrq[j, ] <- residuals(mj,H0=H0,std=TRUE)
         mrq[j, ] <- sort(mrq[j, ])
     }
-    conf <- 0.95
     infsup <- apply(mrq, 2, quantile, probs = c((1 - conf)/2, 
         (1 + conf)/2), type = 6)
     media <- colMeans(mrq)
