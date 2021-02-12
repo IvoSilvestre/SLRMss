@@ -24,7 +24,7 @@ respectively)
   \item{statistic}{the statistic which will be used. It includes "Wald", "LR", "Score" or "Gradient".
 %%     ~~Describe \code{statistic} here~~
 }
-  \item{testingbeta}{an vector containing the names of the variables to be testing.
+  \item{testingbeta}{a vector containing the names of the variables to be testing.
 %%     ~~Describe \code{testingbeta} here~~
 }
   \item{data}{an optional data frame containing the variables in the model.
