@@ -1,5 +1,5 @@
 # SLRMss
-Symmetric linear regression models for small samples. Guided by: @sesiommedeiros
+Symmetric linear regression models for small samples. Guided by: Francisco Moisés Cândido Medeiros (https://github.com/sesiommedeiros).
 
 # Set up
 Steps to obtain the Wald, likelihood ratio, score, and gradient tests and the corrected likelihood ratio, score, and gradient tests in small-sized and moderate-sized samples in symmetric linear regression models, see Medeiros, F. M. C. and Ferrari, S.L.P (2017):
