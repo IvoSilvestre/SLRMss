@@ -7,17 +7,11 @@ function (x, conf = 0.95, seed = NULL, H0=FALSE,xlab=NULL,ylab=NULL,main=NULL)
         rfam = function(x, mu, sigma) {
             rnorm(x, mu, sigma)
         }
-        pfam = function(x,mu,sigma){
-            pnorm(x,mu,sigma)
-        }
     }
     else {
         if (family == "Student") {
             rfam = function(x, mu, sigma) {
                 sigma * rt(x, df = fit$xi) + mu
-            }
-            pfam = function(x,mu,sigma){
-                pt((x-mu)/sigma,df=fit$xi)
             }
         }
         else {
@@ -25,16 +19,10 @@ function (x, conf = 0.95, seed = NULL, H0=FALSE,xlab=NULL,ylab=NULL,main=NULL)
                 rfam = function(x, mu, sigma) {
                   rlogis(x, mu, sigma)
                 }
-                pfam = function(x,mu,sigma){
-                  plogis(x,mu,sigma)
-                }
             }
             else {
                 rfam = function(x, mu, sigma) {
                   rnormp(x, mu, sigma, p = 2/(fit$xi + 1))
-                }
-                pfam = function(x,mu,sigma){
-                  pnormp(x,mu,sigma,p = 2/(fit$xi + 1))
                 }
             }
         }
@@ -54,7 +42,7 @@ function (x, conf = 0.95, seed = NULL, H0=FALSE,xlab=NULL,ylab=NULL,main=NULL)
         mj <- SLRMss(form, data = data.frame(Yj, fit$X), statistic = "Wald", 
             testingbeta = fit$testingbeta, family = family, 
             xi = fit$xi)
-        mrq[j, ] <- qnorm(pfam(residuals(mj,H0=H0,std=TRUE),0,1),0,1)
+        mrq[j, ] <- residuals(mj,H0=H0,std=TRUE)
         mrq[j, ] <- sort(mrq[j, ])
     }
     infsup <- apply(mrq, 2, quantile, probs = c((1 - conf)/2, 
