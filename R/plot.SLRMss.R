@@ -52,6 +52,7 @@ function (x, conf = 0.95, seed = NULL, H0=FALSE,xlab=NULL,ylab=NULL,main=NULL)
     if(is.null(xlab)) xlab="Quantile N(0,1)"
     if(is.null(ylab)) ylab="Sample Quantiles"
     if(is.null(main)) main=paste0("Envelope plot - ",100*conf,"% confidence")
+    ylim=c(min(faixay,min(rqobs)),max(faixay,max(rqobs)))
     qq0 <- qqnorm(rqobs, main = main, xlab = xlab,ylab=ylab, 
         pch = 1, col = "white", ylim = faixay)
     eixox <- sort(qq0$x)
