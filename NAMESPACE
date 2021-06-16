@@ -1,4 +1,4 @@
-exportPattern(".")
+export(SLRMss)
 
 importFrom("graphics", "lines", "points")
 importFrom("methods", "missingArg")
