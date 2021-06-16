@@ -1,5 +1,5 @@
-plot.SLRMss <-
-function (x, conf = 0.95, seed = NULL, H0=FALSE,xlab=NULL,ylab=NULL,main=NULL) 
+envplot <-
+function (x, J=100, conf = 0.95, seed = NULL, H0=FALSE,xlab=NULL,ylab=NULL,main=NULL) 
 {   
     fit = x
     family = fit$family
@@ -30,7 +30,6 @@ function (x, conf = 0.95, seed = NULL, H0=FALSE,xlab=NULL,ylab=NULL,main=NULL)
     set.seed(seed)
     y = fit$y
     n = length(y)
-    J = 100
     fv = fitted(fit,H0=H0)
     sige = coef(fit,H0=H0)$phi
     rqobs <- residuals(fit,H0=H0,std=TRUE)
