@@ -1,7 +1,7 @@
 envplot <-
 function (object, J=100, conf = 0.95, seed = NULL, H0=FALSE,xlab,ylab,main) 
 {   
-    if(class!="SLRMss"){
+    if(class(object)!="SLRMss"){
     stop("Object class must be 'SLRMss'.")
     }
     fit=object
