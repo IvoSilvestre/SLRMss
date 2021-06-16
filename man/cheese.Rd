@@ -30,5 +30,6 @@ plot(exp(cheese$cohe),cheese$fat)
 fit=SLRMss(exp(cohe)~fat+xangum,family="Normal",testingbeta="xangum",
 statistic="Gradient",data=cheese)
 summary(fit)
+envplot(fit)
 }
 \keyword{datasets}
