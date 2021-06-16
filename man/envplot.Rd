@@ -1,14 +1,14 @@
-\name{plot.SLRMss}
-\alias{plot.SLRMss}
+\name{envplot}
+\alias{envplot}
 %- Also NEED an '\alias' for EACH other topic documented here.
-\title{plot.SLRMss
+\title{envplot
 %%  ~~function to do ... ~~
-}
 \usage{
-\S3method{plot}{SLRMss}(x, conf=0.95, seed=NULL, H0=FALSE, xlab=NULL, ylab=NULL, main=NULL)
+envplot(object, J=100, conf=0.95, seed=NULL, H0=FALSE, xlab=NULL, ylab=NULL, main=NULL)
 }  
 \arguments{
-\item{x}{an object of class 'SLRMss'.}
+\item{object}{an object of class 'SLRMss'.}
+\item{J}{the number of Monte Carlo replications. 100 by default.}
 \item{conf}{the confidence level. 0.95 by default.}
 \item{seed}{a optional seed.}
 \item{H0}{if TRUE, choose the fitted values under null hypothesis, if FALSE, choose the fitted values under alternative hypothesis (default).}
