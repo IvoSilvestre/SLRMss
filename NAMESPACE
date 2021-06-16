@@ -1,4 +1,4 @@
-export(SLRMss)
+export(SLRMss,envplot)
 
 importFrom("graphics", "lines", "points")
 importFrom("methods", "missingArg")
