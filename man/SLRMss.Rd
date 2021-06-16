@@ -83,6 +83,7 @@ plot(fit)
 coef(fit)
 residuals(fit,std=TRUE)
 fitted(fit)
+envplot(fit)
 ###############################################################
 ###############################################################
 # Using the cheese data frame to fit the cohesiveness and test xanthan gum percentage4
