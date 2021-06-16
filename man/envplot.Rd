@@ -4,7 +4,7 @@
 \title{envplot
 %%  ~~function to do ... ~~
 \usage{
-envplot(object, J=100, conf=0.95, seed=NULL, H0=FALSE, xlab=NULL, ylab=NULL, main=NULL)
+envplot(object, J=100, conf=0.95, seed=NULL, H0=FALSE, xlab, ylab, main)
 }  
 \arguments{
 \item{object}{an object of class 'SLRMss'.}
