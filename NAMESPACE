@@ -10,6 +10,7 @@ importFrom("normalp","rnormp")
              
 S3method(print, SLRMss)
 S3method(summary, SLRMss)
+S3method(plot, SLRMss)
 S3method(coef, SLRMss)
 S3method(fitted, SLRMss)
 S3method(residuals, SLRMss)
