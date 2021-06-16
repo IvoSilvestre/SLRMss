@@ -31,5 +31,6 @@ fit=SLRMss(emulsion~arabicgum+xanthangum+orangeoil,family="Student",
 xi=3,testingbeta="xanthangum",statistic="LR",data=orange)
 summary(fit)
 plot(fit)
+envplot(fit)
 }
 \keyword{datasets}
