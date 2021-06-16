@@ -1,7 +1,10 @@
 envplot <-
-function (x, J=100, conf = 0.95, seed = NULL, H0=FALSE,xlab=NULL,ylab=NULL,main=NULL) 
+function (object, J=100, conf = 0.95, seed = NULL, H0=FALSE,xlab=NULL,ylab=NULL,main=NULL) 
 {   
-    fit = x
+    if(class!="SLRMss"){
+    stop("Object class must be 'SLRMss'.")
+    }
+    fit=object
     family = fit$family
     if (family == "Normal") {
         rfam = function(x, mu, sigma) {
