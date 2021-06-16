@@ -1,4 +1,4 @@
-plot.SLRMss=
+plot.SLRMss<-
   function(x){
     par(mfrow=c(2,2))
     resid=residuals(x,std=T)
