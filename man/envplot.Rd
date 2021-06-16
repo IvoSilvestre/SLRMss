@@ -3,6 +3,7 @@
 %- Also NEED an '\alias' for EACH other topic documented here.
 \title{Envelope Plot
 %%  ~~function to do ... ~~
+}       
 \usage{
 envplot(object, J=100, conf=0.95, seed=NULL, H0=FALSE, xlab, ylab, main)
 }  
