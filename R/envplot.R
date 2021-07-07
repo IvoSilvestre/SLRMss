@@ -1,5 +1,5 @@
 envplot <-
-function (object, J=100, conf = 0.95, seed = NULL, H0=FALSE,xlab,ylab,main) 
+function (object, J=100, conf = 0.95, seed = NULL, H0=FALSE,colors=c("red","green"),xlab,ylab,main) 
 {   
     if(class(object)!="SLRMss"){
     stop("Object class must be 'SLRMss'.")
@@ -55,7 +55,7 @@ function (object, J=100, conf = 0.95, seed = NULL, H0=FALSE,xlab,ylab,main)
     if(missingArg(ylab)) ylab="Sample Quantiles"
     if(missingArg(main)) main=paste0("Envelope plot - ",100*conf,"% confidence")
     ylim=c(min(faixay,min(rqobs)),max(faixay,max(rqobs)))
-    cores=ifelse(sort(rqobs)<infsup[1,] | sort(rqobs) > infsup[2,],"red","green")
+    cores=ifelse(sort(rqobs)<infsup[1,] | sort(rqobs) > infsup[2,],colors[1],colors[2])
     qq0 <- qqnorm(rqobs, main = main, xlab = xlab,ylab=ylab, 
         pch = 1,col=cores, ylim = faixay)
     eixox <- sort(qq0$x)
