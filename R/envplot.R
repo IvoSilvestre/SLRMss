@@ -56,9 +56,8 @@ function (object, J=100, conf = 0.95, seed = NULL, H0=FALSE,colors=c("red","gree
     if(missingArg(main)) main=paste0("Envelope plot - ",100*conf,"% confidence")
     ylim=c(min(faixay,min(rqobs)),max(faixay,max(rqobs)))
     if(length(colors)>=2){colors=ifelse(rqobs<infsup[1,] | rqobs > infsup[2,],colors[1],colors[2])}
-    if(length(pch)==1){pch=rep(pch,n)}
     qq0 <- qqnorm(rqobs, main = main, xlab = xlab,ylab=ylab, 
-        pch = 1,col=colors,pch=pch, ylim = faixay)
+        col=colors,pch=pch, ylim = faixay)
     eixox <- sort(qq0$x)
     #for (i in 1:length(qq0$x)) {
     #    if (sort(qq0$y)[i] < infsup[1, i] | sort(qq0$y)[i] > 
