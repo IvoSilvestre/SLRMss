@@ -18,5 +18,5 @@ envplot(object, J=100, conf=0.95, seed=NULL, H0=FALSE, xlab, ylab, main)
 \item{main}{a title for the plot.}
 } 
 \description{
-Shows an envelope plot of a SLRMss fitted model. The green points are the observations among the limits, the red points are the observations above or below these limits.
+Shows an envelope plot of a SLRMss fitted model.
 }
