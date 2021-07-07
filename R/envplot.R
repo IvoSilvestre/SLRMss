@@ -58,17 +58,17 @@ function (object, J=100, conf = 0.95, seed = NULL, H0=FALSE,xlab,ylab,main)
     qq0 <- qqnorm(rqobs, main = main, xlab = xlab,ylab=ylab, 
         pch = 1, col = "white", ylim = faixay)
     eixox <- sort(qq0$x)
-    %for (i in 1:length(qq0$x)) {
-    %    if (sort(qq0$y)[i] < infsup[1, i] | sort(qq0$y)[i] > 
-    %        infsup[2, i]) {
-    %        points(eixox[i], sort(qq0$y)[i], col = "red", 
-    %            pch = 20)
-    %    }
-    %    else {
-    %        points(eixox[i], sort(qq0$y)[i], col = "green", 
-    %            pch = 20)
-    %    }
-    %}
+    #for (i in 1:length(qq0$x)) {
+    #    if (sort(qq0$y)[i] < infsup[1, i] | sort(qq0$y)[i] > 
+    #        infsup[2, i]) {
+    #        points(eixox[i], sort(qq0$y)[i], col = "red", 
+    #            pch = 20)
+    #    }
+    #    else {
+    #        points(eixox[i], sort(qq0$y)[i], col = "green", 
+    #            pch = 20)
+    #    }
+    #}
     lines(eixox, media)
     lines(eixox, infsup[1, ])
     lines(eixox, infsup[2, ])
