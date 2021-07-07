@@ -55,8 +55,8 @@ function (object, J=100, conf = 0.95, seed = NULL, H0=FALSE,colors=c("red","gree
     if(missingArg(ylab)) ylab="Sample Quantiles"
     if(missingArg(main)) main=paste0("Envelope plot - ",100*conf,"% confidence")
     ylim=c(min(faixay,min(rqobs)),max(faixay,max(rqobs)))
-    if(length(colors)>=2){colors=ifelse(rqobs<infsup[1,] | rqobs > infsup[2,],colors[1],colors[2])}
-    qq0 <- qqnorm(rqobs, main = main, xlab = xlab,ylab=ylab, 
+    if(length(colors)>=2){colors=ifelse(sort(rqobs)<infsup[1,] | sort(rqobs) > infsup[2,],colors[1],colors[2])}
+    qq0 <- qqnorm(sort(rqobs), main = main, xlab = xlab,ylab=ylab, 
         col=colors,pch=pch, ylim = faixay)
     eixox <- sort(qq0$x)
     #for (i in 1:length(qq0$x)) {
