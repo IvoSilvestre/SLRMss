@@ -13,7 +13,7 @@ plot.SLRMss<-
          ylab=ylab[2],main=main[2],pch=16)
     abline(h=0,lty=2,col="red")
     qqnorm(resid,xlab=xlab[3],ylab=ylab[3],main=main[3],pch=16)
-    abline(0,1,col="red")
+    abline(0,1,lty=2,col="red")
     plot(density(resid),xlab=xlab[4],
          ylab=ylab[4],main=main[4])
     points(resid,rep(0,length(resid)),pch=16)
