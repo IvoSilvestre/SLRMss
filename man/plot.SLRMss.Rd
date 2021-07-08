@@ -5,10 +5,15 @@
 %%  ~~function to do ... ~~
 }
 \usage{
-\S3method{plot}{SLRMss}(x)
+\S3method{plot}{SLRMss}(x,xlab=c("Fitted Values","Index","Theoretical Quantiles","Standardized Residuals"),
+             ylab=c("Standardized Residuals", "Standardized Residuals","Sample Quantiles","Density"),
+             main=c("Against Fitted Values","Against Index","Normal Q-Q Plot","Density Estimate"))
 }
 \arguments{
 \item{x}{an object of class 'SLRMss'.}
+\item{xlab}{a vector containing the four x-axis titles.}
+\item{ylab}{a vector containing the four y-axis titles.}
+\item{main}a vector containing the four main plot titles.
 }
 \description{
 Shows four plot for residual analysis. The first plot shows the standardized residuals against the fitted values. The second one shows the standardized residuals against by their index. The third one presents QQ-normal plot of them and the last one shows their density estimate.
