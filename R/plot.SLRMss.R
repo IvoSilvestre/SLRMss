@@ -8,8 +8,10 @@ plot.SLRMss<-
     plot(fitted(x),resid,
          xlab=xlab[1],ylab=ylab[1],
          main=main[1],pch=16)
+    abline(h=0,lty=2,col="red")
     plot(resid,xlab=xlab[2],
          ylab=ylab[2],main=main[2],pch=16)
+    abline(h=0,lty=2,col="red")
     qqnorm(resid,xlab=xlab[3],ylab=ylab[3],main=main[3],pch=16)
     abline(0,1,col="red")
     plot(density(resid),xlab=xlab[4],
