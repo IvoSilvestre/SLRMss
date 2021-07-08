@@ -1,5 +1,5 @@
 envplot <-
-function (object, J=100, conf = 0.95, seed = NULL, H0=FALSE,colors=c("red","green"),pch=16,xlab,ylab,main) 
+function (object, J=100, conf = 0.95, seed = NULL, H0=FALSE,colors=c("red","green"),pch=16,lty=2,xlab,ylab,main) 
 {   
     if(class(object)!="SLRMss"){
     stop("Object class must be 'SLRMss'.")
