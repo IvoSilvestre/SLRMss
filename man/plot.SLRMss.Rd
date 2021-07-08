@@ -5,9 +5,13 @@
 %%  ~~function to do ... ~~
 }
 \usage{
-\S3method{plot}{SLRMss}(x,xlab=c("Fitted Values","Index","Theoretical Quantiles","Standardized Residuals"),
-             ylab=c("Standardized Residuals", "Standardized Residuals","Sample Quantiles","Density"),
-             main=c("Against Fitted Values","Against Index","Normal Q-Q Plot","Density Estimate"))
+\S3method{plot}{SLRMss}(x,
+                        xlab=c("Fitted Values","Index",
+                                 "Theoretical Quantiles","Standardized Residuals"),
+                        ylab=c("Standardized Residuals", "Standardized Residuals",
+                               "Sample Quantiles","Density"),
+                        main=c("Against Fitted Values","Against Index",
+                               "Normal Q-Q Plot","Density Estimate"))
 }
 \arguments{
 \item{x}{an object of class 'SLRMss'.}
