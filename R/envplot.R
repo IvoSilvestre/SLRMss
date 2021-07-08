@@ -56,27 +56,16 @@ function (object, J=100, conf = 0.95, seed = NULL, H0=FALSE,colors=c("red","gree
     if(missingArg(main)) main=paste0("Envelope plot - ",100*conf,"% confidence")
     ylim=c(min(faixay,min(rqobs)),max(faixay,max(rqobs)))
     if(length(colors)>=2){
-        colors=ifelse(sort(rqobs)<infsup[1,] | sort(rqobs) > infsup[2,],colors[1],colors[2])
         if(length(colors)>2) warning("Only the first two colors entries were used.")
+        colors=ifelse(sort(rqobs)<infsup[1,] | sort(rqobs) > infsup[2,],colors[1],colors[2])
     }
     if(length(pch)>=2){
-        pch=ifelse(sort(rqobs)<infsup[1,] | sort(rqobs) > infsup[2,],pch[1],pch[2])
         if(length(pch)>2) warning("Only the first two pch entries were used.")
+        pch=ifelse(sort(rqobs)<infsup[1,] | sort(rqobs) > infsup[2,],pch[1],pch[2])
     }
     qq0 <- qqnorm(sort(rqobs), main = main, xlab = xlab,ylab=ylab, 
         col=colors,pch=pch, ylim = faixay)
     eixox <- sort(qq0$x)
-    #for (i in 1:length(qq0$x)) {
-    #    if (sort(qq0$y)[i] < infsup[1, i] | sort(qq0$y)[i] > 
-    #        infsup[2, i]) {
-    #        points(eixox[i], sort(qq0$y)[i], col = "red", 
-    #            pch = 20)
-    #    }
-    #    else {
-    #        points(eixox[i], sort(qq0$y)[i], col = "green", 
-    #            pch = 20)
-    #    }
-    #}
     if(length(lty)>2)warning("Only the first two lty entries were used")
     if(length(lty)==1) lty[2]=lty
     lines(eixox, media,lty=lty[1])
