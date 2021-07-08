@@ -1,9 +1,10 @@
 plot.SLRMss<-
-  function(x,xlab=c("Fitted Values","Index","Theoretical Quantiles","Standardized Residuals"),
+  function(x,H0=FALSE,
+             xlab=c("Fitted Values","Index","Theoretical Quantiles","Standardized Residuals"),
              ylab=c("Standardized Residuals", "Standardized Residuals","Sample Quantiles","Density"),
              main=c("Against Fitted Values","Against Index","Normal Q-Q Plot","Density Estimate")){
     par(mfrow=c(2,2))
-    resid=residuals(x,std=T)
+    resid=residuals(x,std=T,H0=H0)
     plot(fitted(x),resid,
          xlab=xlab[1],ylab=ylab[1],
          main=main[1],pch=16)
