@@ -5,7 +5,9 @@
 %%  ~~function to do ... ~~
 }       
 \usage{
-envplot(object, J=100, conf=0.95, seed=NULL, H0=FALSE, colors=c("red","green"), pch=16, lty=2, xlab, ylab, main)
+envplot(object, J=100, conf=0.95, seed=NULL, H0=FALSE, 
+        colors=c("red","green"), pch=16, lty=2,
+        xlab, ylab, main)
 }  
 \arguments{
 \item{object}{an object of class 'SLRMss'.}
