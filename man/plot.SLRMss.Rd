@@ -17,7 +17,7 @@
 \item{x}{an object of class 'SLRMss'.}
 \item{xlab}{a vector containing the four x-axis titles.}
 \item{ylab}{a vector containing the four y-axis titles.}
-\item{main}a vector containing the four main plot titles.
+\item{main}{a vector containing the four main plot titles.}
 }
 \description{
 Shows four plot for residual analysis. The first plot shows the standardized residuals against the fitted values. The second one shows the standardized residuals against by their index. The third one presents QQ-normal plot of them and the last one shows their density estimate.
