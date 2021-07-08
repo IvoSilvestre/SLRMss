@@ -5,7 +5,7 @@
 %%  ~~function to do ... ~~
 }
 \usage{
-\S3method{plot}{SLRMss}(x,
+\S3method{plot}{SLRMss}(x,H0=FALSE,
                         xlab=c("Fitted Values","Index",
                                  "Theoretical Quantiles","Standardized Residuals"),
                         ylab=c("Standardized Residuals", "Standardized Residuals",
@@ -15,6 +15,7 @@
 }
 \arguments{
 \item{x}{an object of class 'SLRMss'.}
+\item{H0}{if TRUE, plot the graphics under null hypothesis, if FALSE, plot the graphics under alternative hypothesis (default).}
 \item{xlab}{a vector containing the four x-axis titles.}
 \item{ylab}{a vector containing the four y-axis titles.}
 \item{main}{a vector containing the four main plot titles.}
