@@ -52,7 +52,7 @@ function (object, J=100, conf = 0.95, seed = NULL, H0=FALSE,colors=c("red","gree
     media <- colMeans(mrq)
     faixay <- range(infsup)
     if(missingArg(xlab)) xlab="Quantile N(0,1)"
-    if(missingArg(ylab)) ylab="Sample Quantiles"
+    if(missingArg(ylab)) ylab="Standardized Residuals"
     if(missingArg(main)) main=paste0("Envelope plot - ",100*conf,"% confidence")
     ylim=c(min(faixay,min(rqobs)),max(faixay,max(rqobs)))
     if(length(colors)>=2){
