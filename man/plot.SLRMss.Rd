@@ -9,7 +9,7 @@
                         xlab=c("Fitted Values","Index",
                                  "Theoretical Quantiles","Standardized Residuals"),
                         ylab=c("Standardized Residuals", "Standardized Residuals",
-                               "Sample Quantiles","Density"),
+                               "Standardized Residuals","Density"),
                         main=c("Against Fitted Values","Against Index",
                                "Normal Q-Q Plot","Density Estimate"))
 }
