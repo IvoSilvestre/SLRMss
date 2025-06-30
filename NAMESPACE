@@ -1,5 +1,6 @@
-export(SLRMss,envplot)
+exportClasses(SLRMss)
 
+exportMethod(envplot)
 importFrom("graphics", "lines", "points")
 importFrom("methods", "missingArg")
 importFrom("stats", "as.formula", "coef", "fitted", "model.matrix",
